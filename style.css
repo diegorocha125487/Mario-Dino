@@ -1,0 +1,55 @@
+/* Estilos básicos */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #08a7e5; /* Céu */
+}
+
+.game-container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    background-color: #7CFC00; /* Campo verde */
+    overflow: hidden;
+}
+
+#ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #373d19; /* Cor do chão */
+}
+
+#mario {
+    position: absolute;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(140, 135, 135, 0); /* Representa o Mario */
+    background-image: url('mario.gif'); /* Coloque uma imagem de Mario */
+    background-size: cover;
+    transition: all 0.1s linear;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 50px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(15, 18, 16, 0.564);
+    animation: move 2s infinite linear;
+}
+
+/* Animação dos obstáculos, movendo-os da direita para a esquerda */
+@keyframes move {
+    from {
+        right: -30px;
+    }
+    to {
+        right: 600px;
+    }
+}
